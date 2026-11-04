@@ -10,8 +10,11 @@ OUT = Path(__file__).resolve().parent.parent / "assets"
 OUT.mkdir(exist_ok=True)
 
 # ------------------------------------------------------------------ CONFIG
-C = dict(bg="#000000", panel="#0a0a0a", border="#1f1f1f", ink="#fafafa", muted="#a3a3a3",
-         faint="#525252", edge="#262626", accent="#ffffff", up="#d4d4d4")  # portfolio: black, white, neutral greys
+DARK = dict(bg="#000000", panel="#0a0a0a", border="#1f1f1f", ink="#fafafa", muted="#a3a3a3",
+            faint="#525252", edge="#262626", accent="#ffffff", up="#d4d4d4", noise="1", grain=".045")  # portfolio: black, white, greys
+LIGHT = dict(bg="#ffffff", panel="#f5f5f5", border="#e5e5e5", ink="#0a0a0a", muted="#525252",
+             faint="#a3a3a3", edge="#d4d4d4", accent="#000000", up="#404040", noise="0", grain=".03")  # same greys, inverted
+C = dict(DARK)
 
 SERIF = "'Instrument Serif', Georgia, 'Times New Roman', serif"
 SANS = "'Inter Tight', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif"
@@ -56,6 +59,20 @@ PIPELINE = [("Inspect", "pandas · SQL"), ("Clean", "Python · pytest"), ("Model
 
 
 # ------------------------------------------------------------------ helpers
+def glow_filter():
+    if C["noise"] == "1":  # dark: a bright double bloom
+        return """<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3.2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>"""
+    # light: black bloom reads as a smudge, so keep only a faint soft shadow
+    return """<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="2.4" result="b"/>
+    <feComponentTransfer in="b" result="s"><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+    <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>"""
+
+
 def defs(extra=""):
     return f"""<defs>
   <style>
@@ -68,16 +85,13 @@ def defs(extra=""):
     @keyframes breathe {{ 0%,100% {{ opacity: 1 }} 50% {{ opacity: .35 }} }}
     @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
   </style>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="3.2" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
+  {glow_filter()}
   <filter id="grain" x="0" y="0" width="100%" height="100%">
     <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
-    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .045 0"/>
+    <feColorMatrix values="0 0 0 0 {C['noise']}  0 0 0 0 {C['noise']}  0 0 0 0 {C['noise']}  0 0 0 {C['grain']} 0"/>
   </filter>
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity=".035"/>
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="{C['accent']}" stroke-opacity=".035"/>
   </pattern>
   {extra}
 </defs>"""
@@ -134,7 +148,8 @@ def odometer(x_right, y, text, fs, family, fill, dur=10, begin=0.0, weight="400"
     return "".join(out)
 
 
-FADES = f"""<linearGradient id="fadeL"><stop offset="0" stop-color="{C['panel']}"/><stop offset="1" stop-color="{C['panel']}" stop-opacity="0"/></linearGradient>
+def fades():
+    return f"""<linearGradient id="fadeL"><stop offset="0" stop-color="{C['panel']}"/><stop offset="1" stop-color="{C['panel']}" stop-opacity="0"/></linearGradient>
   <linearGradient id="fadeR"><stop offset="0" stop-color="{C['panel']}" stop-opacity="0"/><stop offset="1" stop-color="{C['panel']}"/></linearGradient>"""
 
 
@@ -180,15 +195,15 @@ def hero():
     <stop offset="0" stop-color="{C['accent']}" stop-opacity=".075"/><stop offset=".55" stop-color="{C['accent']}" stop-opacity=".02"/>
     <stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>
   <radialGradient id="halo2" cx="160" cy="90" r="520" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#ffffff" stop-opacity=".06"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".06"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>
   <linearGradient id="shine" x1="-700" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="{C['ink']}"/><stop offset=".45" stop-color="{C['ink']}"/>
-    <stop offset=".5" stop-color="#ffffff"/><stop offset=".53" stop-color="{C['faint']}"/>
+    <stop offset=".5" stop-color="{C['accent']}"/><stop offset=".53" stop-color="{C['faint']}"/>
     <stop offset=".58" stop-color="{C['ink']}"/><stop offset="1" stop-color="{C['ink']}"/>
     <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1400 0;1400 0" keyTimes="0;.45;1" dur="7s" repeatCount="indefinite"/>
   </linearGradient>
   <linearGradient id="trail"><stop offset="0" stop-color="{C['accent']}" stop-opacity="0"/><stop offset="1" stop-color="{C['accent']}" stop-opacity=".12"/></linearGradient>
-  {FADES}"""
+  {fades()}"""
     o = [f'<rect width="{W}" height="{H}" fill="url(#grid)"/>',
          f'<rect width="{W}" height="{H}" fill="url(#halo2)"/>',
          f'<rect width="{W}" height="{H}" fill="url(#halo)"/>']
@@ -378,7 +393,7 @@ def mini_upi(x0, y0):
 MINI = {"aml": (mini_aml, 920, 214), "recon": (mini_recon, 912, 222), "upi": (mini_upi, 916, 196)}
 
 
-def card(p, i):
+def card(p, i, in_repo=False):
     W, H = 1200, 300
     g = f"""<radialGradient id="chalo" cx="1060" cy="110" r="300" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="{C['accent']}" stop-opacity=".06"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>
@@ -389,9 +404,12 @@ def card(p, i):
          f'<rect x="-320" y="0" width="320" height="1.5" fill="url(#sweep)"><animate attributeName="x" values="-320;1200;1200" '
          f'keyTimes="0;.5;1" dur="8s" begin="{i * 1.2}s" repeatCount="indefinite"/></rect>',
          f'<line x1="770" x2="770" y1="40" y2="{H - 40}" stroke="{C["border"]}"/>',
-         f'<text class="mono" x="48" y="62" font-size="12.5" letter-spacing="2" fill="{C["accent"]}">{p["index"]}'
-         f'<tspan fill="{C["faint"]}">  /  </tspan><tspan fill="{C["muted"]}">github.com/Amaann190/{p["repo"]}</tspan>'
-         f'<tspan fill="{C["accent"]}">  ↗</tspan></text>',
+         (f'<text class="mono" x="48" y="62" font-size="12.5" letter-spacing="2" fill="{C["accent"]}">{p["index"]}'
+          f'<tspan fill="{C["faint"]}">  /  </tspan><tspan fill="{C["muted"]}">AMAAN SHAIKH · FINTECH PORTFOLIO</tspan></text>'
+          if in_repo else
+          f'<text class="mono" x="48" y="62" font-size="12.5" letter-spacing="2" fill="{C["accent"]}">{p["index"]}'
+          f'<tspan fill="{C["faint"]}">  /  </tspan><tspan fill="{C["muted"]}">github.com/Amaann190/{p["repo"]}</tspan>'
+          f'<tspan fill="{C["accent"]}">  ↗</tspan></text>'),
          f'<text class="serif" x="46" y="130" font-size="44" fill="{C["ink"]}" letter-spacing="-.5">{p["title"]}</text>',
          f'<text class="serif" x="48" y="170" font-size="23" font-style="italic" fill="{C["muted"]}">{p["tagline"]}</text>',
          f'<text class="sans" x="48" y="216" font-size="14.5" fill="{C["faint"]}">{p["note"]}</text>',
@@ -400,6 +418,36 @@ def card(p, i):
          f'<text class="mono" x="1152" y="154" font-size="11" letter-spacing="1.6" text-anchor="end" fill="{C["muted"]}">{p["label"]}</text>',
          fn(mx, my)]
     return frame(W, H, "\n".join(o), g, f'{p["title"]}: {p["tagline"]}')
+
+
+# ------------------------------------------------------------------ social preview (static, 1280x640)
+def still(svg):
+    """Drop animation so a screenshot shows the finished state."""
+    import re
+    svg = re.sub(r'<circle[^>]*><animateMotion[^>]*/></circle>', '', svg)
+    svg = re.sub(r'<animate(Transform)?\b[^>]*/>', '', svg)
+    return svg.replace(' class="mono breathe"', ' class="mono"')
+
+
+def social(p):
+    W, H = 1280, 640
+    fn, mx, my = MINI[p["slug"]]
+    g = f"""<radialGradient id="shalo" cx="1060" cy="200" r="520" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".07"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>"""
+    o = [f'<rect width="{W}" height="{H}" fill="url(#grid)"/>', f'<rect width="{W}" height="{H}" fill="url(#shalo)"/>',
+         f'<text class="mono" x="72" y="96" font-size="17" letter-spacing="2.6" fill="{C["accent"]}">{p["index"]}'
+         f'<tspan fill="{C["faint"]}">  /  </tspan><tspan fill="{C["muted"]}">github.com/Amaann190/{p["repo"]}</tspan></text>',
+         f'<text class="serif" x="68" y="236" font-size="76" fill="{C["ink"]}" letter-spacing="-1.5">{p["title"]}</text>',
+         f'<text class="serif" x="72" y="300" font-size="36" font-style="italic" fill="{C["muted"]}">{p["tagline"]}</text>',
+         f'<line x1="72" x2="{W - 72}" y1="360" y2="360" stroke="{C["border"]}"/>',
+         f'<text class="sans" x="68" y="490" font-size="132" font-weight="300" fill="{C["ink"]}" letter-spacing="-3">{p["metric"]}</text>',
+         f'<text class="mono" x="74" y="532" font-size="15" letter-spacing="2.4" fill="{C["muted"]}">{p["label"]}</text>',
+         f'<g transform="translate({850 - mx * 1.6:.1f} {408 - my * 1.6:.1f}) scale(1.6)">{still(fn(mx, my))}</g>',
+         f'<text class="sans" x="{W - 72}" y="532" font-size="17" text-anchor="end" fill="{C["faint"]}">{p["note"]}</text>',
+         f'<text class="mono" x="72" y="{H - 44}" font-size="13" letter-spacing="2" fill="{C["faint"]}">AMAAN SHAIKH  /  FINTECH DATA ANALYST</text>',
+         f'<text class="mono" x="{W - 72}" y="{H - 44}" font-size="13" letter-spacing="2" text-anchor="end" fill="{C["muted"]}">{p["stack"]}</text>']
+    svg = frame(W, H, "\n".join(o), g, p["title"])
+    return still(svg).replace('rx="18"', 'rx="0"')
 
 
 # ------------------------------------------------------------------ pipeline
@@ -424,18 +472,36 @@ def pipeline():
         o.append(f'<text class="mono" x="{x}" y="{y - 28}" font-size="10.5" letter-spacing="1.6" text-anchor="middle" fill="{C["faint"]}">0{i + 1}</text>'
                  f'<text class="serif" x="{x}" y="{y + 52}" font-size="30" text-anchor="middle" fill="{C["ink"]}">{name}</text>'
                  f'<text class="mono" x="{x}" y="{y + 76}" font-size="11" letter-spacing="1" text-anchor="middle" fill="{C["muted"]}">{tools}</text>')
-    o.append(f'<circle r="5" fill="#fff" filter="url(#glow)"><animateMotion path="M {x0} {y} L {x1} {y}" '
+    o.append(f'<circle r="5" fill="{C['accent']}" filter="url(#glow)"><animateMotion path="M {x0} {y} L {x1} {y}" '
              f'keyPoints="0;1;1;0" keyTimes="0;.8;.92;1" calcMode="linear" dur="{D}s" repeatCount="indefinite"/>'
              f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.8;.86;1" dur="{D}s" repeatCount="indefinite"/></circle>')
     return frame(W, H, "\n".join(o), "", "Inspect, clean, model, verify, ship")
 
 
+def build(suffix=""):
+    (OUT / f"hero{suffix}.svg").write_text(hero(), encoding="utf-8")
+    (OUT / f"monitor{suffix}.svg").write_text(monitor(), encoding="utf-8")
+    (OUT / f"pipeline{suffix}.svg").write_text(pipeline(), encoding="utf-8")
+    for i, p in enumerate(PROJECTS):
+        (OUT / f"card-{p['slug']}{suffix}.svg").write_text(card(p, i), encoding="utf-8")
+
+
 if __name__ == "__main__":
     for old in OUT.glob("*.svg"):
         old.unlink()
-    (OUT / "hero.svg").write_text(hero(), encoding="utf-8")
-    (OUT / "monitor.svg").write_text(monitor(), encoding="utf-8")
-    (OUT / "pipeline.svg").write_text(pipeline(), encoding="utf-8")
+    for theme, suffix in [(DARK, ""), (LIGHT, "-light")]:
+        C.update(theme)
+        build(suffix)
+    # per-repo banners (dark + light) and social previews, written next to this folder's sibling repos
+    REPOS = OUT.parent.parent
+    SOC = OUT.parent / "tools" / "social"
+    SOC.mkdir(exist_ok=True)
     for i, p in enumerate(PROJECTS):
-        (OUT / f"card-{p['slug']}.svg").write_text(card(p, i), encoding="utf-8")
-    print("wrote", sorted(f.name for f in OUT.glob("*.svg")))
+        img = REPOS / p["repo"] / "docs" / "images"
+        if img.is_dir():
+            for theme, suffix in [(DARK, ""), (LIGHT, "-light")]:
+                C.update(theme)
+                (img / f"banner{suffix}.svg").write_text(card(p, i, in_repo=True), encoding="utf-8")
+        C.update(DARK)
+        (SOC / f"{p['slug']}.svg").write_text(social(p), encoding="utf-8")
+    print("wrote", sorted(f.name for f in OUT.glob("*.svg")), "+ repo banners + social previews")

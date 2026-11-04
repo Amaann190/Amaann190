@@ -1,6 +1,6 @@
-<a href="https://amaann190.github.io"><img src="assets/hero.svg" width="100%" alt="Amaan Shaikh, fintech data analyst. A scan line sweeps a network of bank accounts and flags a 5-hop money cycle."></a>
+<a href="https://amaann190.github.io"><picture><source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg"><img src="assets/hero.svg" width="100%" alt="Amaan Shaikh, fintech data analyst. A scan line sweeps a network of bank accounts and flags a 5-hop money cycle."></picture></a>
 
-<p align="center"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=1400&color=FAFAFA&center=true&vCenter=true&width=880&height=48&lines=I+trace+money+that+moves+in+circles.;I+reconcile+settlements+to+the+paisa.;I+find+which+banks+fail+the+most+people.;Then+I+write+the+tests+that+prove+it." alt="I trace money that moves in circles. I reconcile settlements to the paisa. I find which banks fail the most people. Then I write the tests that prove it."></p>
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=1400&color=0A0A0A&center=true&vCenter=true&width=880&height=48&lines=I+trace+money+that+moves+in+circles.;I+reconcile+settlements+to+the+paisa.;I+find+which+banks+fail+the+most+people.;Then+I+write+the+tests+that+prove+it."><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=1400&color=FAFAFA&center=true&vCenter=true&width=880&height=48&lines=I+trace+money+that+moves+in+circles.;I+reconcile+settlements+to+the+paisa.;I+find+which+banks+fail+the+most+people.;Then+I+write+the+tests+that+prove+it." alt="I trace money that moves in circles. I reconcile settlements to the paisa. I find which banks fail the most people. Then I write the tests that prove it."></picture></p>
 
 I'm Amaan. I work on payments data, the unglamorous part where money moves between a merchant, a gateway and a bank, and someone has to prove it all lines up.
 
@@ -10,15 +10,15 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 <br>
 
-<a href="https://github.com/Amaann190/aml-graph-intelligence"><img src="assets/monitor.svg" width="100%" alt="Simulated transaction monitor: a feed of transfers with cycle and fan-in patterns flagged. 5.08M transfers scanned, 42.3% precision on graph patterns, top-100 queue precision up from 37% to 57%."></a>
+<a href="https://github.com/Amaann190/aml-graph-intelligence"><picture><source media="(prefers-color-scheme: light)" srcset="assets/monitor-light.svg"><img src="assets/monitor.svg" width="100%" alt="Simulated transaction monitor: a feed of transfers with cycle and fan-in patterns flagged. 5.08M transfers scanned, 42.3% precision on graph patterns, top-100 queue precision up from 37% to 57%."></picture></a>
 
 <br>
 
 ## Ledger
 
-<a href="https://github.com/Amaann190/aml-graph-intelligence"><img src="assets/card-aml.svg" width="100%" alt="AML Graph Intelligence: 415x precision lift over base rate on 5.08M synthetic transfers"></a>
-<a href="https://github.com/Amaann190/merchant-settlement-reconciliation"><img src="assets/card-recon.svg" width="100%" alt="Merchant Settlement Reconciliation: INR 25.4 lakh of recoverable gaps traced across books, gateway and bank"></a>
-<a href="https://github.com/Amaann190/upi-reliability-intelligence"><img src="assets/card-upi.svg" width="100%" alt="UPI Reliability Intelligence: 16.2B UPI transactions covered across 59 banks"></a>
+<a href="https://github.com/Amaann190/aml-graph-intelligence"><picture><source media="(prefers-color-scheme: light)" srcset="assets/card-aml-light.svg"><img src="assets/card-aml.svg" width="100%" alt="AML Graph Intelligence: 415x precision lift over base rate on 5.08M synthetic transfers"></picture></a>
+<a href="https://github.com/Amaann190/merchant-settlement-reconciliation"><picture><source media="(prefers-color-scheme: light)" srcset="assets/card-recon-light.svg"><img src="assets/card-recon.svg" width="100%" alt="Merchant Settlement Reconciliation: INR 25.4 lakh of recoverable gaps traced across books, gateway and bank"></picture></a>
+<a href="https://github.com/Amaann190/upi-reliability-intelligence"><picture><source media="(prefers-color-scheme: light)" srcset="assets/card-upi-light.svg"><img src="assets/card-upi.svg" width="100%" alt="UPI Reliability Intelligence: 16.2B UPI transactions covered across 59 banks"></picture></a>
 
 <sub>Datasets are labelled honestly: AML and reconciliation run on synthetic data with ground truth, UPI uses NPCI's published statistics. The monitor above is a simulated feed.</sub>
 
@@ -26,7 +26,7 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 ## How a project moves
 
-<img src="assets/pipeline.svg" width="100%" alt="Inspect, clean, model, verify, ship">
+<picture><source media="(prefers-color-scheme: light)" srcset="assets/pipeline-light.svg"><img src="assets/pipeline.svg" width="100%" alt="Inspect, clean, model, verify, ship"></picture>
 
 ```text
 + reconcile to the paisa        totals get checked, never trusted
@@ -38,7 +38,7 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 ## Toolbox
 
-<img src="https://skillicons.dev/icons?i=py,sqlite,react,ts,vite,git,github,vscode&theme=dark" height="44" alt="Python, SQLite, React, TypeScript, Vite, Git, GitHub, VS Code">
+<picture><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,sqlite,react,ts,vite,git,github,vscode&theme=light"><img src="https://skillicons.dev/icons?i=py,sqlite,react,ts,vite,git,github,vscode&theme=dark" height="44" alt="Python, SQLite, React, TypeScript, Vite, Git, GitHub, VS Code"></picture>
 
 `pandas` `NetworkX` `Power BI` `DAX` `Streamlit` `pytest`
 
