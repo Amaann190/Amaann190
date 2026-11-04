@@ -28,7 +28,7 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 <img src="assets/pipeline.svg" width="100%" alt="Inspect, clean, model, verify, ship">
 
-```diff
+```text
 + reconcile to the paisa        totals get checked, never trusted
 + rate is not impact            5.89% at a rural bank vs 0.57% at SBI: SBI still fails more people
 + test it like software         64+ pytest tests across three repos
