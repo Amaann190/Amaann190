@@ -1,9 +1,4 @@
-<a href="https://amaann190.github.io">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-    <img alt="Amaan Shaikh, fintech data analyst. I follow money through payment systems until every rupee is accounted for." src="assets/header-light.svg" width="100%">
-  </picture>
-</a>
+<a href="https://amaann190.github.io"><img src="assets/hero.svg" width="100%" alt="Amaan Shaikh, fintech data analyst. A scan line sweeps a network of bank accounts and flags a 5-hop money cycle."></a>
 
 <br>
 
@@ -15,34 +10,23 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 <br>
 
+<a href="https://github.com/Amaann190/aml-graph-intelligence"><img src="assets/monitor.svg" width="100%" alt="Simulated transaction monitor: a feed of transfers with cycle and fan-in patterns flagged. 5.08M transfers scanned, 42.3% precision on graph patterns, top-100 queue precision up from 37% to 57%."></a>
+
+<br>
+
 ## Ledger
 
-<a href="https://github.com/Amaann190/aml-graph-intelligence">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/aml-dark.svg">
-    <img alt="AML Graph Intelligence: 415x precision lift over base rate on 5.08M synthetic transfers" src="assets/aml-light.svg" width="100%">
-  </picture>
-</a>
+<a href="https://github.com/Amaann190/aml-graph-intelligence"><img src="assets/card-aml.svg" width="100%" alt="AML Graph Intelligence: 415x precision lift over base rate on 5.08M synthetic transfers"></a>
+<a href="https://github.com/Amaann190/merchant-settlement-reconciliation"><img src="assets/card-recon.svg" width="100%" alt="Merchant Settlement Reconciliation: INR 25.4 lakh of recoverable gaps traced across books, gateway and bank"></a>
+<a href="https://github.com/Amaann190/upi-reliability-intelligence"><img src="assets/card-upi.svg" width="100%" alt="UPI Reliability Intelligence: 16.2B UPI transactions covered across 59 banks"></a>
 
-<a href="https://github.com/Amaann190/merchant-settlement-reconciliation">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/recon-dark.svg">
-    <img alt="Merchant Settlement Reconciliation: INR 25.4 lakh of recoverable gaps traced across books, gateway and bank" src="assets/recon-light.svg" width="100%">
-  </picture>
-</a>
-
-<a href="https://github.com/Amaann190/upi-reliability-intelligence">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/upi-dark.svg">
-    <img alt="UPI Reliability Intelligence: 16.2B UPI transactions covered across 59 banks" src="assets/upi-light.svg" width="100%">
-  </picture>
-</a>
-
-<sub>Datasets are labelled honestly: AML and reconciliation run on synthetic data with ground truth, UPI uses NPCI's published statistics.</sub>
+<sub>Datasets are labelled honestly: AML and reconciliation run on synthetic data with ground truth, UPI uses NPCI's published statistics. The monitor above is a simulated feed.</sub>
 
 <br><br>
 
-## House rules
+## How a project moves
+
+<img src="assets/pipeline.svg" width="100%" alt="Inspect, clean, model, verify, ship">
 
 ```diff
 + reconcile to the paisa        totals get checked, never trusted
@@ -54,7 +38,13 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 ## Toolbox
 
-`Python` `SQL` `pandas` `NetworkX` `SQLite` `Power BI` `DAX` `Streamlit` `pytest` `React + TypeScript`
+<img src="https://skillicons.dev/icons?i=py,sqlite,react,ts,vite,git,github,vscode&theme=dark" height="44" alt="Python, SQLite, React, TypeScript, Vite, Git, GitHub, VS Code">
+
+`pandas` `NetworkX` `Power BI` `DAX` `Streamlit` `pytest`
+
+## Commit trail
+
+<img src="https://raw.githubusercontent.com/Amaann190/Amaann190/output/snake.svg" width="100%" alt="Snake eating my GitHub contribution graph">
 
 ## Reach me
 
@@ -62,4 +52,5 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 <br>
 
+<img src="https://komarev.com/ghpvc/?username=Amaann190&color=ff5f3a&style=flat-square&label=VISITORS" alt="profile views" align="left">
 <p align="right"><sub><code>closing balance: ₹0.00 unaccounted for</code></sub></p>
