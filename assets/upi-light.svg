@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-label="UPI Reliability Intelligence: Which banks fail most, and which fail the most people.">
+<defs>
+  <style>
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans  { font-family: 'Inter Tight', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif; }
+    .mono  { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, Menlo, monospace; }
+    .blink { animation: blink 1.6s ease-in-out infinite; }
+    .pulse { animation: pulse 6s ease-in-out infinite; }
+        @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: .25 } }
+    @keyframes pulse { 0%,35% { opacity: .0 } 50%,85% { opacity: 1 } 100% { opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .05 0"/>
+  </filter></defs>
+<rect x="1" y="1" width="1198" height="288" rx="16" fill="#fbfaf6" stroke="#e0dbcc"/>
+<line x1="760" x2="760" y1="36" y2="254" stroke="#e0dbcc"/>
+<text class="mono" x="48" y="62" font-size="12.5" letter-spacing="2" fill="#a3a097">03  <tspan fill="#6d6b64">/ github.com/Amaann190/upi-reliability-intelligence</tspan></text>
+<g class="rise"><text class="serif" x="46" y="128" font-size="42" fill="#141413" letter-spacing="-.5">UPI Reliability Intelligence</text></g>
+<g class="rise" style="animation-delay:.15s"><text class="serif" x="48" y="166" font-size="23" font-style="italic" fill="#6d6b64">Which banks fail most, and which fail the most people.</text></g>
+<text class="sans" x="48" y="212" font-size="14.5" fill="#a3a097">59 banks · Jan 2022 to Nov 2024 · NPCI published statistics</text>
+<text class="mono" x="48" y="252" font-size="11.5" letter-spacing="1.6" fill="#6d6b64">PYTHON · SQL · POWER BI · DAX · STREAMLIT</text>
+<text class="serif" x="1152" y="118" font-size="78" text-anchor="end" fill="#141413" letter-spacing="-1">16.2B</text>
+<text class="mono" x="1152" y="146" font-size="11" letter-spacing="1.6" text-anchor="end" fill="#6d6b64">UPI TRANSACTIONS COVERED</text>
+<rect x="912" y="238.1" width="10" height="15.9" fill="#cfcabb"><animate attributeName="height" values="0;15.9" dur=".9s" begin="0.00s" fill="freeze"/><animate attributeName="y" values="254;238.1" dur=".9s" begin="0.00s" fill="freeze"/></rect><rect x="929" y="240.8" width="10" height="13.2" fill="#cfcabb"><animate attributeName="height" values="0;13.2" dur=".9s" begin="0.05s" fill="freeze"/><animate attributeName="y" values="254;240.8" dur=".9s" begin="0.05s" fill="freeze"/></rect><rect x="946" y="233.6" width="10" height="20.4" fill="#cfcabb"><animate attributeName="height" values="0;20.4" dur=".9s" begin="0.10s" fill="freeze"/><animate attributeName="y" values="254;233.6" dur=".9s" begin="0.10s" fill="freeze"/></rect><rect x="963" y="239.9" width="10" height="14.1" fill="#cfcabb"><animate attributeName="height" values="0;14.1" dur=".9s" begin="0.15s" fill="freeze"/><animate attributeName="y" values="254;239.9" dur=".9s" begin="0.15s" fill="freeze"/></rect><rect x="980" y="227.3" width="10" height="26.7" fill="#cfcabb"><animate attributeName="height" values="0;26.7" dur=".9s" begin="0.20s" fill="freeze"/><animate attributeName="y" values="254;227.3" dur=".9s" begin="0.20s" fill="freeze"/></rect><rect x="997" y="237.2" width="10" height="16.799999999999997" fill="#cfcabb"><animate attributeName="height" values="0;16.799999999999997" dur=".9s" begin="0.25s" fill="freeze"/><animate attributeName="y" values="254;237.2" dur=".9s" begin="0.25s" fill="freeze"/></rect><rect x="1014" y="241.7" width="10" height="12.3" fill="#cfcabb"><animate attributeName="height" values="0;12.3" dur=".9s" begin="0.30s" fill="freeze"/><animate attributeName="y" values="254;241.7" dur=".9s" begin="0.30s" fill="freeze"/></rect><rect x="1031" y="194.9" width="10" height="59.1" fill="#d8492a"><animate attributeName="height" values="0;59.1" dur=".9s" begin="0.35s" fill="freeze"/><animate attributeName="y" values="254;194.9" dur=".9s" begin="0.35s" fill="freeze"/></rect><rect x="1048" y="235.4" width="10" height="18.6" fill="#cfcabb"><animate attributeName="height" values="0;18.6" dur=".9s" begin="0.40s" fill="freeze"/><animate attributeName="y" values="254;235.4" dur=".9s" begin="0.40s" fill="freeze"/></rect><rect x="1065" y="242.6" width="10" height="11.399999999999999" fill="#cfcabb"><animate attributeName="height" values="0;11.399999999999999" dur=".9s" begin="0.45s" fill="freeze"/><animate attributeName="y" values="254;242.6" dur=".9s" begin="0.45s" fill="freeze"/></rect><rect x="1082" y="239.0" width="10" height="15.0" fill="#cfcabb"><animate attributeName="height" values="0;15.0" dur=".9s" begin="0.50s" fill="freeze"/><animate attributeName="y" values="254;239.0" dur=".9s" begin="0.50s" fill="freeze"/></rect><rect x="1099" y="231.8" width="10" height="22.2" fill="#cfcabb"><animate attributeName="height" values="0;22.2" dur=".9s" begin="0.55s" fill="freeze"/><animate attributeName="y" values="254;231.8" dur=".9s" begin="0.55s" fill="freeze"/></rect><rect x="1116" y="239.9" width="10" height="14.1" fill="#cfcabb"><animate attributeName="height" values="0;14.1" dur=".9s" begin="0.60s" fill="freeze"/><animate attributeName="y" values="254;239.9" dur=".9s" begin="0.60s" fill="freeze"/></rect><rect x="1133" y="242.87" width="10" height="11.129999999999999" fill="#141413"><animate attributeName="height" values="0;11.129999999999999" dur=".9s" begin="0.65s" fill="freeze"/><animate attributeName="y" values="254;242.87" dur=".9s" begin="0.65s" fill="freeze"/></rect><text class="mono" x="1036" y="193" font-size="9.5" text-anchor="middle" fill="#d8492a">5.89%</text><text class="mono" x="1138" y="236" font-size="9.5" text-anchor="middle" fill="#141413">SBI</text>
+<rect width="1200" height="290" rx="16" filter="url(#grain)" pointer-events="none"/>
+</svg>
