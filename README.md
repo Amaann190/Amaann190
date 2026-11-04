@@ -52,5 +52,5 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=Amaann190&color=ff5f3a&style=flat-square&label=VISITORS" alt="profile views" align="left">
+<img src="https://komarev.com/ghpvc/?username=Amaann190&color=525252&style=flat-square&label=VISITORS" alt="profile views" align="left">
 <p align="right"><sub><code>closing balance: ₹0.00 unaccounted for</code></sub></p>

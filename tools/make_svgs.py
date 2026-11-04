@@ -10,8 +10,8 @@ OUT = Path(__file__).resolve().parent.parent / "assets"
 OUT.mkdir(exist_ok=True)
 
 # ------------------------------------------------------------------ CONFIG
-C = dict(bg="#07080a", panel="#0c0d10", border="#1c1e23", ink="#f2f1ec", muted="#8d8c86",
-         faint="#55565b", edge="#24262c", accent="#ff5f3a", up="#3ee08f")
+C = dict(bg="#000000", panel="#0a0a0a", border="#1f1f1f", ink="#fafafa", muted="#a3a3a3",
+         faint="#525252", edge="#262626", accent="#ffffff", up="#d4d4d4")  # portfolio: black, white, neutral greys
 
 SERIF = "'Instrument Serif', Georgia, 'Times New Roman', serif"
 SANS = "'Inter Tight', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif"
@@ -177,17 +177,17 @@ def hero():
     cyc = " ".join(("M" if i == 0 else "L") + f" {p(n)[0]} {p(n)[1]}" for i, n in enumerate(CYCLE))
     detect = f'values="0;0;1;1;0" keyTimes="0;.6;.64;.94;1" dur="{SCAN_DUR}s" repeatCount="indefinite"'
     g = f"""<radialGradient id="halo" cx="930" cy="240" r="420" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".16"/><stop offset=".55" stop-color="{C['accent']}" stop-opacity=".04"/>
+    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".075"/><stop offset=".55" stop-color="{C['accent']}" stop-opacity=".02"/>
     <stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>
   <radialGradient id="halo2" cx="160" cy="90" r="520" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="#ffffff" stop-opacity=".06"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
   <linearGradient id="shine" x1="-700" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="{C['ink']}"/><stop offset=".45" stop-color="{C['ink']}"/>
-    <stop offset=".5" stop-color="#ffffff"/><stop offset=".53" stop-color="{C['accent']}"/>
+    <stop offset=".5" stop-color="#ffffff"/><stop offset=".53" stop-color="{C['faint']}"/>
     <stop offset=".58" stop-color="{C['ink']}"/><stop offset="1" stop-color="{C['ink']}"/>
     <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1400 0;1400 0" keyTimes="0;.45;1" dur="7s" repeatCount="indefinite"/>
   </linearGradient>
-  <linearGradient id="trail"><stop offset="0" stop-color="{C['accent']}" stop-opacity="0"/><stop offset="1" stop-color="{C['accent']}" stop-opacity=".22"/></linearGradient>
+  <linearGradient id="trail"><stop offset="0" stop-color="{C['accent']}" stop-opacity="0"/><stop offset="1" stop-color="{C['accent']}" stop-opacity=".12"/></linearGradient>
   {FADES}"""
     o = [f'<rect width="{W}" height="{H}" fill="url(#grid)"/>',
          f'<rect width="{W}" height="{H}" fill="url(#halo2)"/>',
@@ -279,7 +279,7 @@ def monitor():
   <linearGradient id="vfadeT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{C['bg']}"/><stop offset="1" stop-color="{C['bg']}" stop-opacity="0"/></linearGradient>
   <linearGradient id="vfadeB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{C['bg']}" stop-opacity="0"/><stop offset="1" stop-color="{C['bg']}"/></linearGradient>
   <radialGradient id="mhalo" cx="980" cy="200" r="330" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".09"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>"""
+    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".05"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>"""
     o = [f'<rect width="{W}" height="{H}" fill="url(#grid)"/>', f'<rect width="{W}" height="{H}" fill="url(#mhalo)"/>',
          f'<circle cx="52" cy="52" r="8" fill="{C["accent"]}" opacity=".25" class="breathe"/><circle cx="52" cy="52" r="3.6" fill="{C["accent"]}"/>',
          f'<text class="mono" x="70" y="56.5" font-size="12.5" font-weight="700" letter-spacing="2.4" fill="{C["ink"]}">LIVE  '
@@ -381,7 +381,7 @@ MINI = {"aml": (mini_aml, 920, 214), "recon": (mini_recon, 912, 222), "upi": (mi
 def card(p, i):
     W, H = 1200, 300
     g = f"""<radialGradient id="chalo" cx="1060" cy="110" r="300" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".13"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>
+    <stop offset="0" stop-color="{C['accent']}" stop-opacity=".06"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></radialGradient>
   <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{C['accent']}" stop-opacity="0"/>
     <stop offset=".5" stop-color="{C['accent']}"/><stop offset="1" stop-color="{C['accent']}" stop-opacity="0"/></linearGradient>"""
     fn, mx, my = MINI[p["slug"]]
