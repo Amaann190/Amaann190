@@ -44,7 +44,7 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 ## Commit trail
 
-<img src="https://raw.githubusercontent.com/Amaann190/Amaann190/output/snake.svg" width="100%" alt="Snake eating my GitHub contribution graph">
+<img src="https://raw.githubusercontent.com/Amaann190/Amaann190/output/snake.svg?v=mono" width="100%" alt="Snake eating my GitHub contribution graph">
 
 ## Reach me
 
