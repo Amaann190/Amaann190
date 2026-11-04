@@ -1,6 +1,6 @@
 <a href="https://amaann190.github.io"><img src="assets/hero.svg" width="100%" alt="Amaan Shaikh, fintech data analyst. A scan line sweeps a network of bank accounts and flags a 5-hop money cycle."></a>
 
-<br>
+<p align="center"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=1400&color=FAFAFA&center=true&vCenter=true&width=880&height=48&lines=I+trace+money+that+moves+in+circles.;I+reconcile+settlements+to+the+paisa.;I+find+which+banks+fail+the+most+people.;Then+I+write+the+tests+that+prove+it." alt="I trace money that moves in circles. I reconcile settlements to the paisa. I find which banks fail the most people. Then I write the tests that prove it."></p>
 
 I'm Amaan. I work on payments data, the unglamorous part where money moves between a merchant, a gateway and a bank, and someone has to prove it all lines up.
 
@@ -50,7 +50,6 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 [amaanshk190@gmail.com](mailto:amaanshk190@gmail.com) &nbsp;/&nbsp; [amaann190.github.io](https://amaann190.github.io)
 
-<br>
+<img src="https://komarev.com/ghpvc/?username=Amaann190&color=525252&style=flat-square&label=VISITORS" alt="profile views">
 
-<img src="https://komarev.com/ghpvc/?username=Amaann190&color=525252&style=flat-square&label=VISITORS" alt="profile views" align="left">
-<p align="right"><sub><code>closing balance: ₹0.00 unaccounted for</code></sub></p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,55:262626,100:737373&height=180&section=footer&text=Let%E2%80%99s%20reconcile%20something.&fontSize=34&fontColor=FAFAFA&fontAlign=50&fontAlignY=62&desc=closing%20balance%3A%20%E2%82%B90.00%20unaccounted%20for&descSize=13&descAlign=50&descAlignY=82" width="100%" alt="Let's reconcile something. Closing balance: ₹0.00 unaccounted for.">
