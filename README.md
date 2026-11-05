@@ -1,4 +1,4 @@
-<a href="https://amaann190.github.io"><picture><source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg"><img src="assets/hero.svg" width="100%" alt="Amaan Shaikh, fintech data analyst. A scan line sweeps a network of bank accounts and flags a 5-hop money cycle."></picture></a>
+<a href="https://amaanshaikh.dev"><picture><source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg"><img src="assets/hero.svg" width="100%" alt="Amaan Shaikh, fintech data analyst. A scan line sweeps a network of bank accounts and flags a 5-hop money cycle."></picture></a>
 
 <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=1400&color=0A0A0A&center=true&vCenter=true&width=880&height=48&lines=I+trace+money+that+moves+in+circles.;I+reconcile+settlements+to+the+paisa.;I+find+which+banks+fail+the+most+people.;Then+I+write+the+tests+that+prove+it."><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=1400&color=FAFAFA&center=true&vCenter=true&width=880&height=48&lines=I+trace+money+that+moves+in+circles.;I+reconcile+settlements+to+the+paisa.;I+find+which+banks+fail+the+most+people.;Then+I+write+the+tests+that+prove+it." alt="I trace money that moves in circles. I reconcile settlements to the paisa. I find which banks fail the most people. Then I write the tests that prove it."></picture></p>
 
@@ -48,7 +48,7 @@ Right now I'm looking for a **fintech analyst internship** in payments, risk, re
 
 ## Reach me
 
-[amaanshk190@gmail.com](mailto:amaanshk190@gmail.com) &nbsp;/&nbsp; [amaann190.github.io](https://amaann190.github.io)
+[amaanshk190@gmail.com](mailto:amaanshk190@gmail.com) &nbsp;/&nbsp; [amaanshaikh.dev](https://amaanshaikh.dev)
 
 <img src="https://komarev.com/ghpvc/?username=Amaann190&color=525252&style=flat-square&label=VISITORS" alt="profile views">
 
